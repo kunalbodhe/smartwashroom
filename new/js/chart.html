@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		chart
+	</title>
+
+<script src="fusioncharts.js" type="text/javascript"></script>
+<script src="themes/fusioncharts.theme.zune.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="chart-container">FusionCharts will render here</div>
+
+
+
+<script type="text/javascript">
+	FusionCharts.ready(function() {
+  var salesChart = new FusionCharts({
+      type: 'msline',
+      renderAt: 'chart-container',
+      width: '500',
+      height: '300',
+      dataFormat: 'json',
+      dataSource: {
+        "chart": {
+          "caption": "live sttus of people count",
+          "subcaption": "gents ledies and assisible",
+          "linethickness": "2",
+          "numberPrefix": "",
+          "showvalues": "0",
+          "formatnumberscale": "1",
+          "labeldisplay": "ROTATE",
+          "slantlabels": "1",
+          "divLineAlpha": "40",
+          "anchoralpha": "0",
+          "animation": "1",
+          "legendborderalpha": "20",
+          "drawCrossLine": "1",
+          "crossLineColor": "#0d0d0d",
+          "crossLineAlpha": "100",
+          "tooltipGrayOutColor": "#80bfff",
+          "theme": "zune"
+        },
+        "categories": [{
+          "category": [{
+            "label": "01:00"
+          }, {
+            "label": "vrush"
+          }, {
+            "label": "2018"
+          }, {
+            "label": "Q4'12"
+          }, {
+            "label": "Q1'13"
+          }, {
+            "label": "Q2'13"
+          }, {
+            "label": "Q3'13"
+          }]
+        }],
+        "dataset": [{
+          "seriesname": "Samsung",
+          "data": [{
+            "value": "716000"
+          }, {
+            "value": "771700"
+          }, {
+            "value": "661600"
+          }, {
+            "value": "698300"
+          }, {
+            "value": "826100"
+          }, {
+            "value": "938300"
+          }, {
+            "value": "892800"
+          }]
+        }, {
+          "seriesname": "Nokia",
+          "data": [{
+            "value": "1174600"
+          }, {
+            "value": "1222800"
+          }, {
+            "value": "1075600"
+          }, {
+            "value": "978700"
+          }, {
+            "value": "1053500"
+          }, {
+            "value": "1117000"
+          }, {
+            "value": "831600"
+          }, ]
+        }, {
+          "seriesname": "Apple",
+          "data": [{
+            "value": "134800"
+          
+          }, {
+            "value": "354600"
+          }, {
+            "value": "331200"
+          }, {
+            "value": "289400"
+          }, {
+            "value": "246200"
+          }, {
+            "value": "434600"
+          }, {
+            "value": "383300"
+          },]
+        }]
+      }
+    })
+    .render();
+});
+
+</script>
+<script type="text/javascript">
+  {
+    "chart": {
+        "palette": "5",
+        "caption": "Sales by Model - H1, 2015",
+        "numberprefix": "$",
+        "rotatevalues": "1",
+        "canvasbgcolor": "681c09",
+        "canvasbgalpha": "25",
+        "placevaluesinside": "1",
+        "legendshadow": "0",
+        "divlinedashed": "0",
+        "divlinecolor": "d7a89b",
+        "basefontcolor": "#681c09",
+        "legendborderalpha": "0",
+        "legendbgcolor": "FFFFFF",
+        "showborder": "0",
+        "plottooltext": "
+$seriesname
+Month : $label
+Revenue : $$value
+",
+        "theme": "zune"
+    },
+    "categories": [
+        {
+            "category": [
+                {
+                    "label": "January"
+                },
+                {
+                    "label": "February"
+                },
+                {
+                    "label": "March"
+                },
+                {
+                    "label": "April"
+                },
+                {
+                    "label": "May"
+                },
+                {
+                    "label": "June"
+                }
+            ]
+        }
+    ],
+    "dataset": [
+        {
+            "seriesname": "Model X12",
+            "color": "F0807F",
+            "showvalues": "1",
+            "data": [
+                {
+                    "value": "8343"
+                },
+                {
+                    "value": "6983"
+                },
+                {
+                    "value": "7658"
+                },
+                {
+                    "value": "8345"
+                },
+                {
+                    "value": "8195"
+                },
+                {
+                    "value": "7684"
+                }
+            ]
+        },
+        {
+            "seriesname": "Model X23",
+            "color": "F1C7D2",
+            "showvalues": "1",
+            "data": [
+                {
+                    "value": "2446"
+                },
+                {
+                    "value": "3935"
+                },
+                {
+                    "value": "3452"
+                },
+                {
+                    "value": "4424"
+                },
+                {
+                    "value": "4925"
+                },
+                {
+                    "value": "4328"
+                }
+            ]
+        }
+    ]
+}
+</script>
+</body>
+</html>

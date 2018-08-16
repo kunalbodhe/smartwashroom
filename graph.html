@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
+
+<div id="container" style="width: 500px; height: 300px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Monthly Average people count and feedback'
+    },
+    subtitle: {
+        text: 'Source: pune airport'
+    },
+    xAxis: {
+        categories: [
+            '7day ago',
+            '6day ago',
+            '5day ago',
+            '4day ago',
+            '3day ago',
+            'yesterday',
+            'today'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'counts'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.1,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'people count',
+        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
+
+    }, {
+        name: 'Good feedback',
+        data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0]
+
+    }, {
+        name: 'Bad feedback',
+        data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0]
+
+    }]
+});
+		</script>
+
+
+  <a href="http://api.html2pdfrocket.com/pdf?value=http://www.vrushabhkale.com/feedback.php&apikey=0c4e1be8-187b-4b1f-8726-0f9ba5ecf39c">Download PDF</a> 
+  <a href="http://html2pdfrocket.com/html/topdf?apikey=0c4e1be8-187b-4b1f-8726-0f9ba5ecf39c">Download Current Page as PDF</a>     
+	</body>
+</html>
